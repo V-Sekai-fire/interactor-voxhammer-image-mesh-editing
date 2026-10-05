@@ -21,4 +21,5 @@ docker build -t interactor-voxhammer-image-mesh-editing .
 
 ## Licence
 
-This repository does not state a licence.
+The repository has no top-level licence. The planning domain files `domain.ex`, `plan.ex` and
+`problem.ex` are MIT by SPDX header.
