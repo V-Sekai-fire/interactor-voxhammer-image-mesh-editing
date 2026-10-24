@@ -8,7 +8,7 @@ It inverts a mesh to the model's latent, edits the masked region under the refer
 pastes the original back outside the mask, and decodes once, so vertices the caller did not
 select stay where they were. The step order is a planning domain in `domain.ex`, shared with the
 text-conditioned variant, and a hook checks the server's plan against it. The model calls are not
-wired into the server yet, so it answers only in stub mode. RFD 1048 owns the packaging.
+wired into the server yet, so it answers only in stub mode. RFD66606-1048 owns the packaging.
 
 ## Build
 

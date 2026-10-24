@@ -1,8 +1,8 @@
-# interactor-voxhammer-image-mesh-editing -- vast.ai worker, RFD 0036/0048.
+# interactor-voxhammer-image-mesh-editing -- vast.ai worker, RFD66606-0036/0048.
 #
-# No weights of its own -- runs on microsoft/TRELLIS.2's backbone (RFD 0038).
+# No weights of its own -- runs on microsoft/TRELLIS.2's backbone (RFD66606-0038).
 # Builds FROM weftspun/trellis2-base's worker stage, same reasoning as
-# interactor-voxhammer-text-mesh-editing (RFD 0048 shares RFD 0047's domain).
+# interactor-voxhammer-text-mesh-editing (RFD66606-0048 shares RFD66606-0047's domain).
 
 FROM python:3.11-slim AS contract
 WORKDIR /app

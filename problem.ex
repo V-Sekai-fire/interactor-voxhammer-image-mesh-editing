@@ -2,8 +2,8 @@
 #
 # Edit one region of one mesh from a reference image.
 #
-# The domain is shared with RFD 0047. Only the conditioning changes,
-# thus this file sets mode and nothing else. RFD 0048 records why one
+# The domain is shared with RFD66606-0047. Only the conditioning changes,
+# thus this file sets mode and nothing else. RFD66606-0048 records why one
 # domain serves both variants.
 defmodule VoxhammerImageEditOne do
   use Taskweft.DSL
@@ -19,7 +19,7 @@ defmodule VoxhammerImageEditOne do
         layer: ""
       }
     },
-    # The one line that differs from RFD 0047. apply_edit checks this
+    # The one line that differs from RFD66606-0047. apply_edit checks this
     # and takes the image alternative.
     mode: %{
       type: :ref,

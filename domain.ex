@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: MIT
 #
 # VoxHammer mesh editing, as a RECTGTN HTN domain.
-# RFD 0047 records why this is a domain and not a script.
+# RFD66606-0047 records why this is a domain and not a script.
 #
 # The model carries no weights of its own. It runs on the TRELLIS.2
-# backbone from RFD 0038.
+# backbone from RFD66606-0038.
 #
 # The guard that matters is preserved_outside. Inversion is lossy,
 # thus a decode of an unedited latent does not return the input mesh
@@ -42,7 +42,7 @@ defmodule VoxhammerMeshEditing do
         layer: ""
       }
     },
-    # RFD 0047 is text, and RFD 0048 is image. One domain serves both.
+    # RFD66606-0047 is text, and RFD66606-0048 is image. One domain serves both.
     mode: %{
       type: :ref,
       init: %{conditioning: "text"}
@@ -110,7 +110,7 @@ defmodule VoxhammerMeshEditing do
         %{pointer_set: "/handle/edited_mesh", value: "/work/edited.usdc"}
       ]
     },
-    # RFD 0053 gives the rule. A muted layer returns the original.
+    # RFD66606-0053 gives the rule. A muted layer returns the original.
     a_write_layer: %{
       params: [],
       body: [

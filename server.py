@@ -1,7 +1,7 @@
-"""VoxHammer image mesh editing. RFD 0047, a composite per RFD 0037.
+"""VoxHammer image mesh editing. RFD66606-0047, a composite per RFD66606-0037.
 
-The order of operations lives in domain.ex/plan.ex, not in this file (RFD
-0037's whole point: "the order lives in the domain, and not in the Python").
+The order of operations lives in domain.ex/plan.ex, not in this file (
+RFD66606-0037's whole point: "the order lives in the domain, and not in the Python").
 This server reads the solved plan (PLAN below, the same 7 steps plan.ex
 records) and calls one Python function per step -- a pipeline change edits
 domain.ex + regenerates plan.ex, not this dispatcher.
@@ -12,7 +12,7 @@ a_splice pastes the original geometry back outside the mask before a_decode
 runs -- that ordering is exactly what the domain's guards enforce and what
 this dispatcher's fixed step list reproduces.
 
-No weights of its own -- runs on microsoft/TRELLIS.2's backbone (RFD 0038).
+No weights of its own -- runs on microsoft/TRELLIS.2's backbone (RFD66606-0038).
 """
 
 import base64
@@ -103,7 +103,7 @@ def _write_edited(work: Path) -> Path:
 
 
 def _to_usd(edited: Path, work: Path) -> Path:
-    """RFD 0053: the edit is a sublayer over the source mesh, not a flat
+    """RFD66606-0053: the edit is a sublayer over the source mesh, not a flat
     file -- muting this layer returns the original."""
     from pxr import Sdf, Usd, UsdGeom
 
@@ -139,7 +139,7 @@ def predict(job_input: dict) -> dict:
     edited = _write_edited(work)
     layer = _to_usd(edited, work)
 
-    # The mesh travels with the layer. RFD 0053's rule -- muting the layer
+    # The mesh travels with the layer. RFD66606-0053's rule -- muting the layer
     # returns the original -- needs the original to be there to return to, and
     # the layer's sourceAsset is a relative path into a temp directory the
     # caller never sees. Returning only the layer shipped a reference that
