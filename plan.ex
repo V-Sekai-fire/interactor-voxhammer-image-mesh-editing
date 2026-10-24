@@ -2,7 +2,7 @@
 #
 # GENERATED. Do not edit by hand.
 #
-# Solved from the RFD 0047 domain, with problem.ex here supplying
+# Solved from the RFD66606-0047 domain, with problem.ex here supplying
 # mode.conditioning of "image".
 #
 #   mcp__taskweft__plan(
@@ -14,8 +14,8 @@ defmodule VoxhammerImageMeshEditingPlan do
   @solved_by "taskweft v0.5.3"
   @temporally_consistent true
 
-  # 7 steps, and one differs from RFD 0047. apply_edit took its :image
-  # alternative here. That is the evidence for the RFD 0048 claim that
+  # 7 steps, and one differs from RFD66606-0047. apply_edit took its :image
+  # alternative here. That is the evidence for the RFD66606-0048 claim that
   # one domain serves both variants.
   @plan [
     ["a_mark_region"],

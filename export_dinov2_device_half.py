@@ -1,8 +1,8 @@
 """Export VoxHammer's DINOv2 stage at a fixed shape and census its operators.
 
-RFD 1167 rung 1 for this model, and rung 2 if the census is clean. The cut is at
+RFD66606-1167 rung 1 for this model, and rung 2 if the census is clean. The cut is at
 the patch tokens: everything after them is `grid_sample` and a scatter, which
-RFD 1131 refuses. `DEVICE_OPS` is read through the manifest link rather than
+RFD66606-1131 refuses. `DEVICE_OPS` is read through the manifest link rather than
 copied, so the allowlist has one home.
 """
 from __future__ import annotations
